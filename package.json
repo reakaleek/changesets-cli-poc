@@ -1,0 +1,22 @@
+{
+  "name": "changesets-cli-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "changesets-cli": "0.0.0",
+    "husky": "^4.2.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "exec < /dev/tty && changesets add && exec <&- && git add .changeset"
+    }
+  }
+}
